@@ -1,0 +1,23 @@
+create_split
+	generates train test splits out of h5 dataset files
+
+knapsack
+	choose frames from final generated probabilities
+
+main
+	main()
+		initialize the dataset
+		split the dataset
+		initialise the model (DSN)
+		initialise optimizer
+		train
+			probs from model
+			bernoulli(probs)
+			init cost with term to limit size of summary
+			for each episode
+				choose actions
+				compute rewards
+				compute expected rewards
+				add 
+
+

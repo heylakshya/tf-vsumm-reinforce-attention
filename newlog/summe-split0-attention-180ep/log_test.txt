@@ -1,0 +1,22 @@
+==========
+Args:Namespace(beta=0.01, dataset='datasets/eccv16_dataset_summe_google_pool5.h5', evaluate=True, gamma=0.1, gpu='0', hidden_dim=256, input_dim=1024, lr=1e-05, max_epoch=180, metric='summe', num_episode=5, num_layers=1, resume='newlog/summe-split0-attention-180ep/model_epoch180.pth.tar', rnn_cell='lstm', save_dir='newlog/summe-split0-attention-180ep', save_results=True, seed=1, split='datasets/summe_splits.json', split_id=0, stepsize=30, use_cpu=False, verbose=True, weight_decay=1e-05)
+==========
+Currently using CPU
+Initialize dataset datasets/eccv16_dataset_summe_google_pool5.h5
+# total videos 25. # train videos 20. # test videos 5
+Initialize model
+Model size: 7.34823M
+Loading checkpoint from 'newlog/summe-split0-attention-180ep/model_epoch180.pth.tar'
+Evaluate only
+==> Test
+---  --------  -------  -------------  ---------------
+No.  Video     F-score  Kendall's Tau  Avg human score
+1    video_20  0.4337   0.2098         0.2790
+2    video_21  0.2374   0.2172         0.3284
+3    video_22  0.3454   0.2487         0.2822
+4    video_3   0.2632   0.2007         0.2334
+5    video_9   0.5922   0.2501         0.2718
+---  --------  -------  -------------  ---------------
+Average F-score 37.4370%
+Average Kendall's tau 0.2253
+Average Human tau 0.2790

@@ -1,0 +1,117 @@
+==========
+Args:Namespace(beta=0.01, dataset='datasets/eccv16_dataset_summe_google_pool5.h5', decay_rate=0.1, evaluate=False, hidden_dim=256, input_dim=1024, lr=1e-05, max_epoch=60, metric='summe', num_episode=5, num_layers=1, resume='', rnn_cell='lstm', save_dir='log_attention_tf/summe-split0', save_results=False, seed=1, split='datasets/summe_splits.json', split_id=0, stepsize=30, verbose=True)
+==========
+Initialize dataset datasets/eccv16_dataset_summe_google_pool5.h5
+# total videos 25. # train videos 20. # test videos 5
+Initialize model
+Model: "net"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                multiple                  1048576   
+_________________________________________________________________
+dense_1 (Dense)              multiple                  1048576   
+_________________________________________________________________
+dense_2 (Dense)              multiple                  1048576   
+_________________________________________________________________
+dense_3 (Dense)              multiple                  1048576   
+_________________________________________________________________
+softmax (Softmax)            multiple                  0         
+_________________________________________________________________
+dense_4 (Dense)              multiple                  1049600   
+_________________________________________________________________
+dense_5 (Dense)              multiple                  1025      
+_________________________________________________________________
+activation (Activation)      multiple                  0         
+_________________________________________________________________
+re_lu (ReLU)                 multiple                  0         
+_________________________________________________________________
+dropout_1 (Dropout)          multiple                  0         
+_________________________________________________________________
+layer_normalization (LayerNo multiple                  2048      
+_________________________________________________________________
+layer_normalization_1 (Layer multiple                  2048      
+=================================================================
+Total params: 5,249,025
+Trainable params: 5,249,025
+Non-trainable params: 0
+_________________________________________________________________
+
+ None 
+
+Model size: 5.24902M
+==> Start training
+epoch 1/60	 reward 0.8890308099985121	
+epoch 2/60	 reward 0.8869060385227202	
+epoch 3/60	 reward 0.9010480403900148	
+epoch 4/60	 reward 0.8944114536046982	
+epoch 5/60	 reward 0.8931604939699174	
+epoch 6/60	 reward 0.895774703025818	
+epoch 7/60	 reward 0.8875709760189056	
+epoch 8/60	 reward 0.8975522339344023	
+epoch 9/60	 reward 0.8986766308546066	
+epoch 10/60	 reward 0.8967653578519821	
+epoch 11/60	 reward 0.898056057691574	
+epoch 12/60	 reward 0.8891182845830918	
+epoch 13/60	 reward 0.8912113732099535	
+epoch 14/60	 reward 0.8812864696979522	
+epoch 15/60	 reward 0.8789153617620469	
+epoch 16/60	 reward 0.8866198438405991	
+epoch 17/60	 reward 0.8847500520944596	
+epoch 18/60	 reward 0.8957297831773758	
+epoch 19/60	 reward 0.8814223486185074	
+epoch 20/60	 reward 0.8838231557607651	
+epoch 21/60	 reward 0.9017799919843673	
+epoch 22/60	 reward 0.8906003296375277	
+epoch 23/60	 reward 0.8977752423286438	
+epoch 24/60	 reward 0.8891224300861358	
+epoch 25/60	 reward 0.8878115612268447	
+epoch 26/60	 reward 0.8966726219654081	
+epoch 27/60	 reward 0.8771813029050829	
+epoch 28/60	 reward 0.8940293222665787	
+epoch 29/60	 reward 0.8926424384117126	
+epoch 30/60	 reward 0.8892651802301407	
+epoch 31/60	 reward 0.8758542686700821	
+epoch 32/60	 reward 0.8897381120920181	
+epoch 33/60	 reward 0.8847831857204438	
+epoch 34/60	 reward 0.8820644468069074	
+epoch 35/60	 reward 0.8878418838977813	
+epoch 36/60	 reward 0.8936226451396942	
+epoch 37/60	 reward 0.8824559086561201	
+epoch 38/60	 reward 0.8817004132270811	
+epoch 39/60	 reward 0.895892133116722	
+epoch 40/60	 reward 0.8835030162334444	
+epoch 41/60	 reward 0.8892702400684357	
+epoch 42/60	 reward 0.8815606826543808	
+epoch 43/60	 reward 0.8892679494619371	
+epoch 44/60	 reward 0.8906463783979415	
+epoch 45/60	 reward 0.8921419715881347	
+epoch 46/60	 reward 0.8931290018558501	
+epoch 47/60	 reward 0.8965128195285799	
+epoch 48/60	 reward 0.8939653933048248	
+epoch 49/60	 reward 0.878770870566368	
+epoch 50/60	 reward 0.8937173449993134	
+epoch 51/60	 reward 0.9069711881875993	
+epoch 52/60	 reward 0.8795534694194792	
+epoch 53/60	 reward 0.8802712297439574	
+epoch 54/60	 reward 0.9075269305706024	
+epoch 55/60	 reward 0.8852930438518524	
+epoch 56/60	 reward 0.8868855953216552	
+epoch 57/60	 reward 0.8855938029289245	
+epoch 58/60	 reward 0.8996824461221695	
+epoch 59/60	 reward 0.8747294402122497	
+epoch 60/60	 reward 0.8950469988584517	
+==> Test
+---  --------  -------  -------------  ---------------
+No.  Video     F-score  Kendall's Tau  Avg human score
+1    video_20  0.5737   0.2249         0.2790
+2    video_21  0.1736   0.2176         0.3284
+3    video_22  0.2723   0.2329         0.2822
+4    video_3   0.3588   0.2545         0.2334
+5    video_9   0.3167   0.2037         0.2718
+---  --------  -------  -------------  ---------------
+Average F-score 33.9011%
+Average Kendall's tau 0.2267
+Average Human tau 0.2790
+Finished. Total elapsed time (h:m:s): 0:30:20
+Model saved to log_attention_tf/summe-split0/model_epoch60
